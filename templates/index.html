@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GET YO WEATHER REPORT</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" />
+</head>
+<body>
+  <main class="weather-app">
+    <header class="top-bar">
+      <input type="text" placeholder="Search city..." class="search-box" />
+      <button class="search-btn">Search</button>
+    </header>
+
+    <section class="weather-main">
+      <div class="temp-section">
+        <h1 class="temperature">{{temp_c}}</h1>
+        <p class="condition">{{condition_text}}</p>
+        <p class="feelslike">{{feelslike_c}}</p>
+      </div>
+      <div class="icon-section">
+        <img src={{icon}} alt="Weather icon" />
+      </div>
+    </section>
+
+    <section class="location-info">
+      <h2 class="city">{{location}}</h2>
+      <p class="time">{{localtime}}</p>
+    </section>
+
+    <section class="details">
+      <div class="detail"><span>Humidity</span><p>{{humidity}}</p></div>
+      <div class="detail"><span>Wind</span><p>{{wind_kph}}</p></div>
+      <div class="detail"><span>Pressure</span><p>{{pressure_mb}}</p></div>
+      <div class="detail"><span>Cloud</span><p>{{cloud}}</p></div>
+      <div class="detail"><span>Precipitation</span><p>{{precip_mm}}</p></div>
+      <div class="detail"><span>UV Index</span><p>{{uv}}</p></div>
+    </section>
+
+    <section class="air-quality">
+      <h3>Air Quality Index</h3>
+      <div class="aq-grid">
+        <div>CO: {{co}}</div>
+        <div>NO₂: {{no2}}</div>
+        <div>O₃: {{o3}}</div>
+        <div>SO₂: {{so2}}</div>
+        <div>PM₂.₅: {{pm2_5}}</div>
+        <div>PM₁₀: {{pm10}}</div>
+      </div>
+      <p class="aq-index">US EPA Index: {{us_epa_index}} | DEFRA Index: {{gb_defra_index}}</p>
+    </section>
+
+    <footer class="footer">
+      <p>Developed By Alivo Das Adamas University</p>
+    </footer>
+  </main>
+</body>
+</html>
+

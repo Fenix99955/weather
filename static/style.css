@@ -1,0 +1,186 @@
+/* Monochrome, minimal weather app UI */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #555555;
+  --border: #d0d0d0;
+  --radius: 14px;
+  --font: "Inter", "Poppins", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.weather-app {
+  width: 100%;
+  max-width: 700px;
+  background: #fafafa;
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.top-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.search-btn {
+  background: #f2f2f2;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: #e8e8e8;
+}
+
+/* Main weather info */
+.weather-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.condition {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.feelslike {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.icon-section img {
+  width: 70px;
+  height: 70px;
+}
+
+/* Location info */
+.location-info {
+  text-align: center;
+}
+
+.city {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.time {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Details grid */
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.detail {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  text-align: center;
+}
+
+.detail span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.detail p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Air Quality Section */
+.air-quality {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: #fff;
+}
+
+.air-quality h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.aq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px;
+}
+
+.aq-grid div {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.aq-index {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
