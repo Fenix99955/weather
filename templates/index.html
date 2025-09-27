@@ -9,13 +9,14 @@
 <body>
   <main class="weather-app">
     <header class="top-bar">
-      <input type="text" placeholder="Search city..." class="search-box" />
-      <button class="search-btn">Search</button>
+      <form method="get" action="/" class="search-form">
+      <input type="text" name="city" placeholder="Search city..." class="search-box" />
+      <button type="submit" class="search-btn">Search</button>
     </header>
 
     <section class="weather-main">
       <div class="temp-section">
-        <h1 class="temperature">{{temp_c}}</h1>
+        <h1 class="temperature">{{temp_c}} </h1>
         <p class="condition">{{condition_text}}</p>
         <p class="feelslike">{{feelslike_c}}</p>
       </div>
