@@ -1,8 +1,12 @@
-
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, make_response
 import requests
 
 app = Flask(__name__)
+
+@app.after_request
+def add_header(response):
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
+    return response
 
 @app.route("/", methods=["GET"])
 def index():
